@@ -1,0 +1,892 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
+:root {
+    --mainClr: #094074;
+    --contrast: #fe9000;
+    --contrast2: #96cddc;
+    --contrast3: #ffdd4a;
+    --contrast4: #3c6997;
+    --contrast5: #c3eefa;
+--basic:#e8f4f4;
+--blk:black;
+}
+
+body {
+    font-size: 3rem;
+    color:white;
+    background:var(--basic)
+}
+
+
+.sidebar{
+    width:20%;
+    background-color: var(--mainClr);
+    position: fixed;
+    top: 0px;
+    left:0px;
+    height: 100vh;
+    text-align: center;
+}
+
+.sidebar h1{
+        margin-top: 50px;
+        margin-bottom: 15px;
+        padding: 7px;
+        font-family: 'Noto Serif';
+}
+
+.sidebar #imgDiv{
+    margin-top: 40px;
+        margin-bottom: 15px;
+        border-radius: 50%;
+        height: 30%;
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+        background-image: url('Pic.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+
+.sidebarItems {
+    height: 50%;
+    padding: 1rem;
+    margin-top: 50px;
+}
+
+.sidebarItems a {
+    text-decoration: none;
+    color: white;
+}
+
+#ExpInc,
+#CutDownExpenses,
+#Chart {
+    height: 15%;
+    background-color: var(--contrast4);
+    margin-bottom: 30px;
+    text-align: center;
+    align-content: center;
+    border-radius: 50px;
+}
+
+#ExpInc h4,
+#CutDownExpenses h4,
+#Chart h4{
+    margin-top: 2rem;
+}
+
+
+#ExpInc:hover,
+#CutDownExpenses:hover,
+#Chart:hover {
+    transform: scale(0.95);
+}
+
+
+#incomeDiv {
+    margin-top: 2rem;
+    /* background: #cacae8 */
+}
+
+#mainHeading {
+    font-family: 'Madimi One';
+    font-size: 4.5rem;
+    margin-bottom: 3rem;
+
+}
+
+#displayData {
+    display: flex;
+    width: 80%;
+    border: 0.2rem solid var(--mainClr);
+    flex-direction: column;
+    height:5%;
+    position: fixed;
+    top:0;
+}
+
+.mainArea {
+    margin-left: 20%;
+    /* height: 300vh; */
+    /* background-color: pink; */
+
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    /* align-items:center; */
+    padding: 2rem;
+    width:100%;
+    position: fixed;
+    top:32%;
+     height:70vh;
+    /* background-color: aquamarine; */
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    /* align-items:center; */
+    padding: 3rem;
+    width: 78%;
+    /* margin-top: 550px; */
+    overflow-y: scroll;
+    height: 70vh;
+    /* background-color: aquamarine; */
+}
+
+#main1,#main2,#main3{
+width:100%;
+min-height:70vh;
+background-color: var(--basic);
+padding:3rem;
+border-radius: 4rem;
+}
+
+#main1 h3{
+    text-align: center;
+    margin-top: 0;
+    color: var(--mainClr);
+}
+
+#main2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.cutDownExpenses{
+    position: fixed;
+    top:100%;
+    height:300px;
+    /* background-color: burlywood; */
+}
+
+#dashboard {
+    width: 100%;
+    text-align: center;
+    background: var(--mainClr);
+}
+
+#dashboardInfo {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+}
+
+.Data {
+    background-color: var(--contrast2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 12rem;
+}
+
+
+
+.Data h3 {
+    margin-bottom: 0;
+    margin-top: 0;
+    background-color: var(--mainClr);
+    padding: 0.7rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+    width: 95%;
+    text-align: center;
+}
+
+#income {
+    width: 20%;
+    margin-right: 1rem;
+    border-radius: 1.5rem;
+}
+
+
+#expense {
+    width: 20%;
+    margin-right: 1rem;
+    border-radius: 1.5rem;
+}
+
+#totalDisplay {
+    width: 30%;
+    border-radius: 1.5rem;
+    margin-right: 1rem;
+}
+
+#deficit {
+    width: 30%;
+    border-radius: 1.5rem;
+}
+
+.Data #incomeAmount {
+    color: green;
+}
+
+.Data #expenseAmount {
+    color: brown;
+}
+
+.Data #totalAmount {
+    color: blue;
+}
+
+.Data h4 {
+    border-bottom: 0.3rem solid black;
+}
+
+
+.selectionMainDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--contrast4);
+    border-radius: 1.5rem;
+    padding:1rem;
+}
+
+.selectionMainDiv h3{
+    color: white;
+}
+
+.selectionArea {
+    display: flex;
+    width: 90%;
+    margin-top: 13px;
+    border: 0.2rem solid var(--mainClr);
+    border-radius: 2rem;
+    padding: 1rem;
+
+}
+
+.selectionArea div {
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1.5rem;
+}
+
+.selectionArea label {
+    height: 3rem;
+    background-color: var(--contrast2);
+    color: var(--blk);
+    width: 100%;
+    text-align: center;
+    /* padding-top: 0.3rem; */
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+
+/* #inputType {
+    width: 22%;
+    height: auto;
+}
+
+#inputType label {
+    padding-top: 1.2rem;
+}
+
+#inputType select {
+    width: 100%;
+    height: 5rem;
+    font-size: 2.5rem;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 0 0 1.5rem 1.5rem;
+} */
+
+.selectionArea #category {
+    width: 35%;
+}
+
+.selectionArea #category1{
+    width:45%;
+}
+
+.selectionArea #priority {
+    width: 30%;
+}
+
+#category input,#category1 input {
+    width: 98%;
+    height: 5rem;
+    font-size: 2.5rem;
+    text-align: center;
+    border-radius: 0 0 1.5rem 1.5rem;
+}
+
+#category label,#category1 label {
+    padding-top: 1.2rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+#amount,#amount1 {
+    width: 35%;
+}
+
+#amount label,#amount1 label {
+    padding-top: 1.2rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+#amount input,#amount1 input{
+    width: 97%;
+    height: 5rem;
+    text-align: center;
+    font-size: 2.5rem;
+    border-radius: 0 0 1.5rem 1.5rem;
+}
+
+#priority label {
+    padding-top: 1.2rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+#priority input {
+    width: 97%;
+    height: 5rem;
+    text-align: center;
+    font-size: 2.5rem;
+    border-radius: 0 0 1.5rem 1.5rem;
+}
+
+.btnDiv {
+    width: 20%;
+    margin-left: auto;
+    padding-top: 1.5rem;
+}
+
+.addBtn {
+    margin-top: 0;
+    background: var(--contrast2);
+    font-size: 3rem;
+    padding: 1rem;
+    border-radius: 1.5rem;
+}
+
+.addBtn:hover,
+.delBtn:hover,
+.editBtn:hover,.clickbtn:hover {
+    transform: scale(0.9)
+}
+
+#itemsList {
+    width: 100%;
+    height:950px;
+    margin-top: 1.25rem;
+    padding-right: 0.6rem;
+    /* background-color: var(--mainClr); */
+    border: 0.1rem solid beige;
+    border-radius: 2rem;
+    text-align: center;
+    padding: 1rem;
+    /* overflow-y: scroll; */
+    display: flex;
+    justify-content: space-between; 
+}
+
+#iList1,#iList2,#pList1,#pList2{
+    background-color: var(--contrast2);
+    width:45%;
+    border-radius: 1.5rem;
+    height: 950px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#iList1{
+    width: 50%;
+}
+
+#iList2 {
+    width: 50%;
+}
+
+#pList1,
+#pList2{
+    height: 770px;
+    width:70%
+}
+
+#iList1 h3,
+#iList2 h3{
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+#pList1 h3,
+#pList2 h3{
+    margin-bottom: 0;
+    color: var(--mainClr)
+}
+
+#items,#items2,#priorityItems,#priorityItems2{
+    list-style-type: none;
+}
+
+#items li, #items2 li,#priorityItems li,#priorityItems2 li {
+    display: flex;
+    /* justify-content: space-evenly; */
+    margin-bottom: 1rem;
+    width: 100%;
+    border-radius:1.5rem;
+    background-color: var(--contrast4);
+    color:white;
+}
+
+#items li{
+padding-right: 1rem;
+}
+#items2 li{
+padding-right: 1rem;
+width:65rem;
+}
+
+
+#items li .box1,#priorityItems li .box1,#priorityItems2 li .box1 {
+    /* background-color: rgb(218, 249, 172); */
+    border-radius: 1.5rem;
+    display: flex;
+    width: 48rem;
+    padding: 0.5rem;
+    
+}
+
+
+#priorityItems,#priorityItems{
+    margin-top:1rem;
+}
+
+
+#priorityItems li,
+#priorityItems2 li {
+    width: 65rem;
+}
+
+#items2 li .box1{
+        /* background-color: rgb(218, 249, 172); */
+        border-radius: 1.5rem;
+        display: flex;
+        /* width: 32rem; */
+        padding: 0.5rem;
+        
+    }
+
+#items li .box1 div{
+    width: 16rem;
+    word-wrap: break-word;
+    /* background-color: var(--contrast4); */
+}
+
+#items2 li .box1 div{
+    min-width:24rem;
+    /* background-color: var(--contrast); */
+    margin-right:1rem;
+    word-wrap: break-word;
+}
+
+#priorityItems li .box1 div,
+#priorityItems2 li .box1 div{
+    /* background-color: var(--contrast); */
+    min-width:15rem;
+    margin-right:1rem;
+    word-wrap: break-word;
+}
+
+#items li .box2,#items2 li .box2 {
+    /* display: none; */
+    /* margin-left: 1rem; */
+    margin-top:1rem;
+/* background-color: var(--contrast3) */
+}
+
+.incomeType {
+    color: green;
+}
+
+.expenseType {
+    color: brown;
+}
+
+
+.delBtn button,
+.editBtn button {
+    margin-top: 0.5rem;
+    color: white;
+    width: 100%;
+    font-size: 3rem;
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+.editBtn {
+    margin-right: 1.5rem;
+}
+
+.editBtn,
+.delBtn {
+    width: 100%;
+    
+}
+
+.delBtn button {
+    background-color: red;
+}
+
+.editBtn button {
+    background-color: blue;
+}
+
+/* #items li:hover,#items2 li:hover {
+    transform: scale(1.01);
+} */
+
+/* #items li:hover .box2,#items2 li:hover .box2 {
+    display: flex;
+    align-items: center;
+    width: 15rem;
+} */
+
+/* #items li .box1:hover {
+    width: 50rem;
+} */
+
+.edit-name,
+.edit-amount,
+.edit-priority {
+    margin-top: 1rem;
+    width: 16rem;
+    height: 4rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#savingDiv{
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* justify-content: center; */
+    flex-direction: column;
+    /* height:300px; */
+    background-color: var(--contrast4);
+    font-size: 65px;
+    width:40%;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+#savingDiv label{
+    /* background-color: var(--contrast2); */
+    width:98%;
+    border-radius:1.5rem;
+   padding: 1rem;
+}
+
+#savingInput{
+    width: 50%;
+    height: 70%;
+    font-size: 3rem;
+    text-align: center;
+    border-radius:1.5rem;
+    margin-top: 1rem;
+}
+
+.priorityItemsScroll{
+    width: 100%;
+        height: 770px;
+        margin-top: 1.25rem;
+        padding-right: 0.6rem;
+        /* background-color: var(--mainClr); */
+        border: 0.1rem solid beige;
+        border-radius: 2rem;
+        text-align: center;
+        padding: 1rem;
+        /* overflow-y: scroll; */
+        display: flex;
+        justify-content: space-between;
+}
+
+#savingSubDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* background: var(--contrast); */
+    width:98%;
+    padding: 1rem;
+}
+
+.clickbtn {
+    margin-top: 0.5rem;
+    margin-left: 1.5rem;
+    background: var(--contrast2);
+    font-size: 3rem;
+    padding: 1rem;
+    border-radius: 1.5rem;
+}
+
+#priorityExpensesChart,
+#priorityExpensesChart2,#incomeExpenseChart {
+    max-height: 700px;
+    max-width: 800px;
+
+}
+
+#main3{
+    display:flex;
+    justify-content: space-evenly;
+    /* background:var(--contrast) */
+}
+
+#main3 h3{
+color: var(--mainClr);
+text-align: center;
+}
+
+#incChart,#greedyChart,#dpChart{
+    /* background: var(--contrast2); */
+    width:40%;
+}
+/* @media (max-width:1600px) {
+    body {
+        font-size: 1.7rem;
+
+    }
+
+    #displayData,
+    #selectionArea,
+    #itemsList {
+        width: 75%;
+    }
+
+    #selectionArea label {
+        font-size: 1.9rem;
+        height: 4rem;
+    }
+
+    #selectionArea input,
+    #selectionArea select {
+        font-size: 2rem;
+        height: 4rem;
+    }
+
+    #addBtn,
+    .delBtn button,
+    .editBtn button {
+        font-size: 1.8rem;
+        padding: 1.5rem;
+    }
+
+    .edit-name,
+    .edit-amount,
+    .edit-type {
+        width: 13rem;
+        font-size: 1.7rem;
+        margin-bottom: 1rem;
+    }
+
+    li:hover .edit-name,
+    .edit-amount,
+    .edit-type {
+        width: 10rem;
+    }
+
+    li:hover .delBtn button,
+    .editBtn button {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width:1440px) {
+    body {
+        font-size: 1.5rem;
+    }
+
+    #displayData,
+    #selectionArea,
+    #itemsList {
+        width: 75%;
+    }
+
+    #selectionArea label {
+        font-size: 1.9rem;
+        height: 4rem;
+    }
+
+    #selectionArea input,
+    #selectionArea select {
+        font-size: 2rem;
+        height: 4rem;
+    }
+
+    #addBtn,
+    .delBtn button,
+    .editBtn button {
+        font-size: 1.8rem;
+        padding: 1.5rem;
+    }
+
+    #income {
+        width: 15%;
+    }
+
+    #expense {
+        width: 15%;
+    }
+
+    #totalDisplay {
+        width: 40%;
+        border-radius: 1.5rem;
+        margin-right: 1rem;
+    }
+
+    #deficit {
+        width: 30%;
+        border-radius: 1.5rem;
+    }
+
+    .edit-name,
+    .edit-amount {
+        margin-top: 1rem;
+    }
+
+
+}
+
+
+@media (max-width:1240px) {
+    body {
+        font-size: 1.5rem;
+    }
+
+    #displayData,
+    #selectionArea,
+    #itemsList {
+        width: 75%;
+    }
+
+    #selectionArea label {
+        font-size: 2rem;
+        height: 4rem;
+    }
+
+    #selectionArea input,
+    #selectionArea select {
+        font-size: 2rem;
+        height: 4rem;
+    }
+
+    #addBtn,
+    .delBtn button,
+    .editBtn button {
+        font-size: 2rem;
+        padding: 1.5rem;
+    }
+
+    #income {
+        width: 15%;
+    }
+
+
+    #expense {
+        width: 15%;
+    }
+
+    #totalDisplay {
+        width: 40%;
+        border-radius: 1.5rem;
+        margin-right: 1rem;
+    }
+
+    #deficit {
+        width: 30%;
+        border-radius: 1.5rem;
+    }
+
+    .edit-name,
+    .edit-amount {
+        margin-top: 1rem;
+    }
+
+
+}
+
+@media (max-width:1024px) {
+    body {
+        font-size: 1.5rem;
+    }
+
+    #displayData,
+    #selectionArea,
+    #itemsList {
+        width: 75%;
+    }
+
+    #selectionArea label {
+        font-size: 1.7rem;
+        height: 4rem;
+    }
+
+    #selectionArea input,
+    #selectionArea select {
+        font-size: 1.7rem;
+        height: 4rem;
+    }
+
+    #addBtn,
+    .delBtn button,
+    .editBtn button {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+
+    #income {
+        width: 18%;
+    }
+
+    .Data h3 {
+        font-size: 1.3rem;
+    }
+
+
+    #expense {
+        width: 20%;
+    }
+
+    #totalDisplay {
+        width: 30%;
+        border-radius: 1.5rem;
+        margin-right: 1rem;
+        text-align: center;
+    }
+
+    #deficit {
+        width: 30%;
+        border-radius: 1.5rem;
+        text-align: center;
+    }
+
+    .edit-name,
+    .edit-amount {
+        margin-top: 1rem;
+        font-size: 1.7rem;
+    }
+
+    li:hover .edit-name,
+    .edit-amount,
+    .edit-type {
+        width: 8rem;
+    }
+
+    li:hover .delBtn button,
+    .editBtn button {
+        font-size: 1.6rem;
+    }
+} */
